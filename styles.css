@@ -1,0 +1,474 @@
+/* General Vintage Colors */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f1e5;
+    margin: 0;
+    padding: 0;
+    color: #4a3c2c;
+}
+
+/* Header Section */
+header {
+    background-color: #3e2723;
+    color: #e6d9b3;
+    padding: 2em;
+    text-align: center;
+}
+
+#hotel-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4em;
+    margin: 0;
+    background: linear-gradient(45deg, #e6d9b3, #a67c52);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Set text color to transparent */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-info {
+    margin-top: 0.5em;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+/* Navbar - Stylish Rectangular Buttons with Hover Effects */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    background-color: #2f1b0c;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    font-family: 'Playfair Display', serif;
+    color: #e6d9b3;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    border-radius: 8px;
+    transition: background-color 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #a67c52;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Animations */
+.section-animated {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* When visible, animate */
+.section-animated.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 3em 2em;
+    background-color: #fff9f2;
+}
+
+#home h2 {
+    font-size: 2.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+#about {
+    padding: 3em 2em;
+    background-color: #eae0c8;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-img {
+    width: 40%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.story {
+    width: 55%;
+    font-size: 1.3em;
+    line-height: 1.8;
+}
+
+.marathi-text {
+    font-family: 'Playfair Display', serif;
+    color: #a67c52;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.contact-icons a {
+    text-decoration: none;
+    color: #3e2723;
+    margin-right: 1em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+    color: #a67c52;
+}
+
+/* Menu Section */
+#menu {
+    text-align: center;
+    padding: 3em 2em;
+    background-color: #f3e5d2;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.menu-img {
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Gallery Section */
+ #gallery {
+    padding: 1em; /* Less padding */
+    background-color: #f8f1e5;
+    text-align: center;
+}
+
+.gallery-heading {
+    font-family: 'Cormorant Garamond', serif; /* Change font style */
+    font-size: 2.5em; /* Increase font size */
+    margin-bottom: 1em; /* Space below heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+/* Use flexbox to ensure images are in one line */
+.gallery-grid {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space out images evenly */
+    align-items: center; /* Center items vertically */
+    gap: 1em; /* Reduced gap between images for uniform spacing */
+    max-width: 1200px; /* Set a max-width to limit the container width */
+    margin: 0 auto; /* Center the grid in the middle of the page */
+}
+
+/* Image styles */
+.gallery-img {
+    flex: 1 1 calc(25% - 1em); /* Allow images to grow and shrink, minimum width of 200px */
+    max-width: 25%; /* Set a maximum width to allow for four in a row */
+    height: auto; /* Allow height to adjust automatically */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for effects */
+    position: relative; /* For the shiny effect */
+    overflow: hidden; /* Hide overflow for the shine effect */
+    border: 5px solid transparent; /* Space for the wavy border */
+}
+
+/* Wavy border effect */
+.gallery-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('path_to_wavy_border_image.png') repeat-x; /* Add wavy border image */
+    z-index: -1; /* Send the border behind the images */
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* Hover Effects */
+.gallery-img:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+}
+
+/* Shine Effect */
+.gallery-img::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 100%;
+    height: 120%; /* Extend to create a shine effect */
+    background: rgba(255, 255, 255, 0.5); /* White shiny overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.gallery-img:hover::after {
+    opacity: 1; /* Show shine effect on hover */
+}
+
+body {
+    background-color: #f8f8f8; /* Optional background color */
+}
+
+.gallery {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the images */
+    align-items: center; /* Center align vertically */
+    margin: 20px; /* Optional margin around the gallery */
+}
+
+.image-box {
+    border: 2px solid #ccc; /* Border around each image box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    margin: 5px; /* Margin between boxes */
+    overflow: hidden; /* Ensure image does not overflow */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.image-box:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.image-box img {
+    width: 200px; /* Adjust width as necessary */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the image takes full width of the box */
+}
+
+/* Contact Section */
+#contact {
+    background-color: #e6d9b3;
+    padding: 3em 2em;
+    text-align: center;
+}
+
+.contact-info {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+.contact-icons a {
+    text-decoration: none;
+    color: #3e2723; /* Change to match your design */
+    margin-right: 1em; /* Space between links */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+    color: #a67c52; /* Change this color on hover */
+}
+
+/* Adjust icon size if needed */
+.zomato-icon,
+.map-icon {
+    font-size: 1.5em; /* Larger icons for better visibility */
+}
+
+
+/* WhatsApp Button Style */
+.whatsapp-button {
+    text-align: center; /* Center the button */
+    margin-bottom: 1em; /* Space between button and form */
+}
+
+.whatsapp-icon {
+    display: inline-block;
+    padding: 1em;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+    background-color: #1EBB60;
+}
+
+/* Contact Form */
+#contact-form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Fixed width for form */
+}
+
+#contact-form label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+#contact-form input, 
+#contact-form textarea {
+    width: 100%; /* Full width of form container */
+    padding: 1em;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 1.5em;
+    font-size: 1em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form textarea {
+    resize: none; /* Prevent resizing */
+}
+
+#contact-form button {
+    padding: 1em 2em;
+    font-size: 1.2em;
+    background-color: #3e2723;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact-form button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Map Container */
+.map-container {
+    margin-top: 2em;
+    width: 100%;
+    height: 300px; /* Set height for the map */
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2em;
+    background-color: #3e2723;
+    color: #e6d9b3;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Footer Content */
+.footer-content {
+    margin-top: 2em;
+}
+/* General styles for links in contact section and footer */
+.contact-info a, /* For contact section */
+.footer-content a { /* For footer section */
+    color: #4a3c2c; /* Change this to your desired color */
+    text-decoration: none; /* Remove the underline */
+}
+
+.contact-info a:hover, /* Hover effect for contact section */
+.footer-content a:hover { /* Hover effect for footer section */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+
+/* Menu Section */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.menu-img {
+    width: 70%; /* Adjust the width as needed */
+    max-width: 400px; /* Set a maximum width */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for effects */
+}
+
+.menu-img:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5em;
+}
+
+.gallery-img {
+    width: 100%; /* Full width of the grid cell */
+    max-width: 200px; /* Set a maximum width */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for effects */
+}
+
+.gallery-img:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img, .story {
+        width: 100%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 1em 0;
+    }
+
+    #contact-form {
+        width: 90%;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+        width: 100%;
+    }
+}
